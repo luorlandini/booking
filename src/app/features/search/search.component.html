@@ -10,13 +10,9 @@
         </form>
 
         <div class="separator"></div>
-        <app-hotel-list
-      [hotels]="hotels"
-      [text]="text"
-      [active]="active"
-      (setActive)="setActive($event)"
-    ></app-hotel-list>
-      </div>
+        <app-hotel-list [hotels]="hotels" [text]="text" [active]="active" (setActive)="setActive($event)"></app-hotel-list>
+
+    </div>
     </div>
 
     <!--MAP-->
