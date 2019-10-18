@@ -17,7 +17,7 @@ export class SearchComponent {
   constructor(
     private http: HttpClient,
     public cart: CartService
-    ) { 
+    ) {
     this.searchHotels(this.text);
   }
 
@@ -36,9 +36,9 @@ export class SearchComponent {
   }
 
   sendEmail({email, msg}){
-    console.log(`sent 
-                ${email}, 
-                ${msg}, 
+    console.log(`sent
+                ${email},
+                ${msg},
                 ${this.active.email}`
                 );
   }
