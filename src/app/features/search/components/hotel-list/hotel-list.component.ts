@@ -9,7 +9,7 @@ import {Hotel} from '../../../../model/hotel';
   <div
     *ngFor="let hotel of hotels"
     class="horiz-grid separator"
-    (click)="setActive(hotel)"
+    (click)="setActive.emit(hotel)"
     [ngClass]="{'active': hotel.id == active?.id}"
     >
     <div>{{ hotel.name }}</div>
