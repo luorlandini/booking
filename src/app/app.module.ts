@@ -8,9 +8,7 @@ import { LoginComponent } from './features/login/login.component';
 import { CartComponent } from './features/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { IntToArrayPipe } from './features/shared/pipes/int-to-array.pipe';
 import { HotelListComponent } from './features/search/components/hotel-list/hotel-list.component';
-import { SeparatorComponent } from './features/shared/components/separator/separator.component';
 import { HotelFormComponent } from './features/search/components/hotel-form/hotel-form.component';
 import { GmapComponent } from './features/search/components/gmap/gmap.component';
 import { RatesComponent } from './features/search/components/rates/rates.component';
@@ -19,9 +17,10 @@ import { ReservationsComponent } from './features/search/components/reservations
 import { ImageGalleryComponent } from './features/search/components/image-gallery/image-gallery.component';
 import { ServicesComponent } from './features/search/components/services/services.component';
 import { ContactFormComponent } from './features/search/components/contact-form/contact-form.component';
-import { CardComponent } from './features/shared/components/card/card.component';
 import { NoResultsComponent } from './features/search/no-results.component';
 import { SharedModule } from './features/shared/shared.module';
+import { NavbarComponent } from './core/components/navbar.component';
+import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +36,7 @@ import { SharedModule } from './features/shared/shared.module';
     ImageGalleryComponent,
     ServicesComponent,
     ContactFormComponent,
-
-    NoResultsComponent
+    NoResultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +44,7 @@ import { SharedModule } from './features/shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
