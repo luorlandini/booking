@@ -8,7 +8,7 @@ import { LoginComponent } from './features/login/login.component';
 import { CartComponent } from './features/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { IntToArrayPipe } from './shared/pipes/int-to-array.pipe';
+import { IntToArrayPipe } from './features/shared/pipes/int-to-array.pipe';
 import { HotelListComponent } from './features/search/components/hotel-list/hotel-list.component';
 import { SeparatorComponent } from './features/shared/components/separator/separator.component';
 import { HotelFormComponent } from './features/search/components/hotel-form/hotel-form.component';
@@ -21,6 +21,7 @@ import { ServicesComponent } from './features/search/components/services/service
 import { ContactFormComponent } from './features/search/components/contact-form/contact-form.component';
 import { CardComponent } from './features/shared/components/card/card.component';
 import { NoResultsComponent } from './features/search/no-results.component';
+import { SharedModule } from './features/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +29,6 @@ import { NoResultsComponent } from './features/search/no-results.component';
     SearchComponent,
     LoginComponent,
     CartComponent,
-    IntToArrayPipe,
-    SeparatorComponent,
     HotelFormComponent,
     GmapComponent,
     RatesComponent,
@@ -38,14 +37,15 @@ import { NoResultsComponent } from './features/search/no-results.component';
     ImageGalleryComponent,
     ServicesComponent,
     ContactFormComponent,
-    CardComponent,
+
     NoResultsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
