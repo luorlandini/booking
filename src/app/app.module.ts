@@ -1,13 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './features/search/search.component';
-import { LoginComponent } from './features/login/login.component';
-import { CartComponent } from './features/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SearchComponent } from './features/search/search.component';
 import { HotelListComponent } from './features/search/components/hotel-list/hotel-list.component';
 import { HotelFormComponent } from './features/search/components/hotel-form/hotel-form.component';
 import { GmapComponent } from './features/search/components/gmap/gmap.component';
@@ -19,23 +16,13 @@ import { ServicesComponent } from './features/search/components/services/service
 import { ContactFormComponent } from './features/search/components/contact-form/contact-form.component';
 import { NoResultsComponent } from './features/search/no-results.component';
 import { SharedModule } from './features/shared/shared.module';
-import { NavbarComponent } from './core/components/navbar.component';
 import { CoreModule } from './core/core.module';
+import { CartModule } from './features/cart/cart.module';
+import { LoginModule } from './features/login/login.module';
+import { SearchModule } from './features/search/search.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HotelListComponent,
-    SearchComponent,
-    LoginComponent,
-    CartComponent,
-    HotelFormComponent,
-    GmapComponent,
-    RatesComponent,
-    StarsComponent,
-    ReservationsComponent,
-    ImageGalleryComponent,
-    ServicesComponent,
-    ContactFormComponent,
     NoResultsComponent,
   ],
   imports: [
@@ -44,7 +31,10 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    CartModule,
+    LoginModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
