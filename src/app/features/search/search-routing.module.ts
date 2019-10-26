@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { SearchComponent } from './search.component';
 import { NoResultsComponent } from './no-results.component';
 

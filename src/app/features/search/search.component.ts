@@ -28,7 +28,8 @@ export class SearchComponent {
     this.http.get<Hotel[]>('http://localhost:3000/hotels?q=' + text)
           .subscribe(result =>{
             if(!result.length){
-              this.router.navigateByUrl('no-results');
+              this.router.navigateByUrl('search/no-results');
+              return;
             }
             this.hotels = result;
             this.setActive(this.hotels[0]);

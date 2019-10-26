@@ -13,7 +13,7 @@ import { AuthService } from '../services/auth.service';
             >SEARCH</span
           >
           <span class="btn" routerLink="cart" routerLinkActive="active"
-            >CART</span
+            >CART ({{cart.items.length}})</span
           >
           <span class="btn" (click)="auth.logout()">LOGOUT</span>
         </div>

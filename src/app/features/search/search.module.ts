@@ -12,30 +12,27 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
-import { SearchRoutingModule } from '../search-routing/search-routing.module';
-import { RouterModule } from '@angular/router';
-
+import { SearchRoutingModule } from './search-routing.module';
+import {NoResultsComponent} from './no-results.component';
 @NgModule({
   declarations: [
-    HotelListComponent,
     SearchComponent,
-    HotelFormComponent,
     GmapComponent,
-    RatesComponent,
-    StarsComponent,
-    ReservationsComponent,
-    ImageGalleryComponent,
     ServicesComponent,
+    ImageGalleryComponent,
+    ReservationsComponent,
+    HotelFormComponent,
     ContactFormComponent,
-
+    HotelListComponent,
+    StarsComponent,
+    RatesComponent,
+    NoResultsComponent,
   ],
   imports: [
     CommonModule,
-    CommonModule,
     FormsModule,
     SharedModule,
-    SearchRoutingModule,
-    RouterModule
+    SearchRoutingModule
   ]
 })
 export class SearchModule { }
